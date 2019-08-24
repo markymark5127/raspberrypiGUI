@@ -1,4 +1,4 @@
-from appPage import AppPage
+from .appPage import AppPage
 
 
 class HomePage(AppPage):

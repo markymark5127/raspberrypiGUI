@@ -1,7 +1,7 @@
-from Tkinter import *
-from app import App
-from appIcon import AppIcon
-from appDock import AppDock
+from tkinter import *
+from .app import App
+from .appIcon import AppIcon
+from .appDock import AppDock
 
 # contains a grid of apps max 8 apps
 # pageNum contains this pages number
@@ -13,11 +13,19 @@ class AppPage:
 
     def __init__(self, page_num, root):
         self.root = root
-        self.appGrid = Frame(self.root, background="black", border=1)
-        self.appGrid.pack(fill=BOTH, expand=1, side=TOP)
+        self.appFrame = Frame(self.root, background="black")
+        self.appFrame.pack(fill=BOTH, expand=1, side=TOP)
+        self.dockFrame = Frame(self.root, background="gray")
+        self.dockFrame.pack(fill=X, expand=1, side=BOTTOM)
+
+        self.appGrid = Frame(self.appFrame, background="blue")
+        self.appGrid.grid_rowconfigure(0, weight=1)
+        self.appGrid.grid_columnconfigure(0, weight=1)
         self.dockGrid = Frame(self.root, background="gray")
-        self.dockGrid.pack(fill=X, expand=1, side=BOTTOM)
-        self.mainApp = App(AppIcon("main", "main", self.appGrid, "black"))
+        self.dockGrid.grid_rowconfigure(0, weight=1)
+        self.dockGrid.grid_columnconfigure(0, weight=1)
+
+        self.mainApp = App(AppIcon("main", "main", self.appGrid, "green"))
         self.mainApps = [self.mainApp]
         self.dockApp = App(AppIcon("dock", "dock", self.dockGrid, "gray"))
         self.dockApps = [self.dockApp]
@@ -31,6 +39,6 @@ class AppPage:
                 if len(self.mainApps) > i:
                     self.mainApps[i].icon.frame.grid(row=r, column=c, sticky="wens")
                 else:
-                    blank = Frame(self.appGrid, height="88", width="96", border=5, background="")
+                    blank = Frame(self.appGrid, border=5, background="white")
                     blank.grid(row=r, column=c, sticky="wens")
                 i = i + 1

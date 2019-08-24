@@ -1,6 +1,6 @@
-from Tkinter import *
-from app import App
-from appIcon import AppIcon
+from tkinter import *
+from .app import App
+from .appIcon import AppIcon
 
 # contains a grid of apps max 8 apps
 # pageNum contains this pages number
@@ -16,8 +16,3 @@ class AppDock:
         for i in range(len(self.dockApps)):
             if len(self.dockApps) > i:
                 self.dockApps[i].icon.frame.grid(row=0, column=i, sticky="wens")
-                # self.dockApps[i].icon.appIcon.grid(sticky="wens")
-            #else:
-                #blank = App(AppIcon("blank", "blank", root))
-               # blank.icon.root.grid(row=0, column=i, sticky="wens")
-                # blank.icon.appIcon.grid(sticky="wens")
