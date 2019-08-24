@@ -6,7 +6,8 @@ import time
 
 
 root = Tk()
-root.overrideredirect(True)
+# below command stops the window buttons from displaying
+# root.overrideredirect(True)
 app = FullScreenApp(root)
 # main = Frame(root, width=385, height=460, background="black")
 main = Frame(root, background="black")
