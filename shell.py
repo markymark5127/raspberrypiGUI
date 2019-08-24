@@ -8,15 +8,15 @@ import time
 root = Tk()
 # below command stops the window buttons from displaying
 # root.overrideredirect(True)
-app = FullScreenApp(root)
-# main = Frame(root, width=385, height=460, background="black")
-main = Frame(root, background="black")
-# main.pack_propagate(0)
-main.pack(fill=BOTH, expand=1)
+# app = FullScreenApp(root)
+main = Frame(root, width=320, height=480, background="black")
+# main = Frame(root, background="black")
+main.pack_propagate(0)
+main.pack(fill=None, expand=False)
 
 # status bar
 time1 = ''
-status = Label(main, height=5, fg="white", bg="black")
+status = Label(main, fg="white", bg="black")
 status.pack(side=TOP)
 
 
@@ -39,9 +39,9 @@ tick()
 
 # commenting out for keyboard
 # Display area
-display = Frame(main, background="black")
-display.pack(fill=BOTH, expand=True)
-homePage = AppPage(0, display)
-#keyboard = Keyboard(main)
+#display = Frame(main, background="black")
+#display.pack(fill=BOTH, expand=True)
+#homePage = AppPage(0, display)
+keyboard = Keyboard(main)
 
 root.mainloop()
