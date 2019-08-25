@@ -13,5 +13,5 @@ class AppIcon:
         self.iconImg = icon_img
         self.root = root
         self.color = color
-        self.appIcon = Button(self.root, text=self.name, highlightbackground=self.color)
+        self.appIcon = Button(self.root, text=self.name, height=1, width=1, highlightbackground=self.color)
 

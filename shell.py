@@ -1,6 +1,8 @@
 from tkinter import *
 from classes.appPage import AppPage
-from classes.keyboard import Keyboard
+from classes.englishKeyboard import EnglishKeyboard
+from classes.numericKeyboard import NumericKeyboard
+from classes.dialpadKeyboard import DialpadKeyboard
 from classes.fullScreenApp import FullScreenApp
 import time
 
@@ -39,9 +41,10 @@ tick()
 
 # commenting out for keyboard
 # Display area
-#display = Frame(main, background="black")
-#display.pack(fill=BOTH, expand=True)
-#homePage = AppPage(0, display)
-keyboard = Keyboard(main)
+# display = Frame(main, background="black")
+# display.pack(fill=BOTH, expand=True)
+# homePage = AppPage(0, display)
+# keyboard = EnglishKeyboard(main)
+keyboard = DialpadKeyboard(main)
 
 root.mainloop()

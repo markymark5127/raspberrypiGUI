@@ -1,7 +1,7 @@
 from tkinter import *
 
 
-class Keyboard:
+class EnglishKeyboard:
 
     q = 'q'
     w = 'w'
@@ -56,7 +56,7 @@ class Keyboard:
         self.pButton = Button(self.firstRow, text=self.p)
         self.deleteButton = Button(self.firstRow, text=u"\u232B")
 
-        self.tabButton = Button(self.secondRow, text=u"\u2B7E")
+        self.tabButton = Button(self.secondRow, text=u"\u21E5")
         self.aButton = Button(self.secondRow, text=self.a)
         self.sButton = Button(self.secondRow, text=self.s)
         self.dButton = Button(self.secondRow, text=self.d)
@@ -81,7 +81,7 @@ class Keyboard:
         self.questionButton = Button(self.thirdRow, text="?")
 
         self.numButton = Button(self.fourthRow, text="123")
-        self.spaceBar = Button(self.fourthRow, text="                                         ")
+        self.spaceBar = Button(self.fourthRow, text="                               ")
         self.keyboardButton = Button(self.fourthRow, text=u"\u2328")
 
         self.qButton.grid(row=0, column=0)

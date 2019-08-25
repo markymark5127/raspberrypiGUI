@@ -19,5 +19,5 @@ class AppDock:
 
                 self.dockApps[i].icon.appIcon.grid(row=0, column=i, sticky="wens")
             else:
-                blank = Button(self.root, "", highlightbackground="gray")
+                blank = Button(self.root, text="", highlightbackground="gray")
                 blank.grid(row=0, column=i, sticky="wens")

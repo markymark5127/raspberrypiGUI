@@ -23,7 +23,7 @@ class AppPage:
 
         self.dockGrid = Frame(self.appFrame, border=5, background="gray")
         self.dockGrid.pack(fill=X, side=BOTTOM, expand=0)
-        self.dockGrid.grid_rowconfigure(0, weight=1)
+        # self.dockGrid.grid_rowconfigure(0, weight=1)
 
         self.mainApp1 = App(AppIcon("main", "main1", self.appGrid, "black"))
         # self.mainApp2 = App(AppIcon("main", "main2", self.appGrid, "black"))
@@ -46,6 +46,6 @@ class AppPage:
                 if len(self.mainApps) > i:
                     self.mainApps[i].icon.appIcon.grid(row=r, column=c, sticky="wens")
                 else:
-                    blank = Button(self.appGrid, "", highlightbackground="black")
+                    blank = Button(self.appGrid, text="", bg="black", highlightbackground="black")
                     blank.grid(row=r, column=c, sticky="wens")
                 i = i + 1
